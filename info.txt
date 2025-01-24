@@ -1,8 +1,5 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 
-Interceptores HTTP: Personalizando interceptor para excluir rutas
+Interceptores HTTP: Retornando false en un interceptor
 
 
- o  rutas:
-addPathPatterns
-Retornando false en un interceptor

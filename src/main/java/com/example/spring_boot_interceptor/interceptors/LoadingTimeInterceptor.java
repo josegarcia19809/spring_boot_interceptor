@@ -1,5 +1,6 @@
 package com.example.spring_boot_interceptor.interceptors;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
@@ -9,6 +10,9 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 @Component("loadingTimeInterceptor")
@@ -32,7 +36,20 @@ public class LoadingTimeInterceptor implements HandlerInterceptor {
         Random random = new Random();
         int delay = random.nextInt(1000);
         Thread.sleep(delay);
-        return true;
+
+        // Si devuelve false ya no continua la ejecución del controlador
+        // y en este caso mandaría el mensaje de abajo
+        Map<String, String> json = new HashMap<>();
+        json.put("error", "No tienes acceso a este recurso");
+        json.put("date", new Date().toString());
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(json);
+        response.setContentType("application/json");
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(jsonString);
+
+        return false;
     }
 
     @Override
