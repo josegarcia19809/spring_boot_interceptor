@@ -1,0 +1,18 @@
+Spring Framework 6 & Spring Boot 3 desde cero a experto
+
+
+
+
+Interceptores HTTP: Registrando interceptor en la configuración de spring
+
+08:26
+Implementando Rest Controller
+08:38
+Implementando interceptor TiempoTranscurrido
+08:25
+Personalizando interceptor para incluir o excluir rutas
+06:07
+Retornando false en un interceptor
+09:29
+Descargar Código Fuente
+00:03
