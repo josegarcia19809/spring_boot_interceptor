@@ -3,10 +3,10 @@ Spring Framework 6 & Spring Boot 3 desde cero a experto
 
 
 
-Interceptores HTTP: Registrando interceptor en la configuración de spring
+Interceptores HTTP: Implementando Rest Controller
 
 08:26
-Implementando Rest Controller
+
 08:38
 Implementando interceptor TiempoTranscurrido
 08:25
