@@ -1,8 +1,8 @@
 Spring Framework 6 & Spring Boot 3 desde cero a experto
 
-Interceptores HTTP: Implementando interceptor TiempoTranscurrido
+Interceptores HTTP: Personalizando interceptor para incluir rutas
 
 
-Personalizando interceptor para incluir o excluir rutas
-
+ o excluir rutas:
+addPathPatterns
 Retornando false en un interceptor
